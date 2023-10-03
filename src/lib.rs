@@ -158,17 +158,13 @@ pub use engine::Engine;
 pub mod alphabet;
 
 mod encode;
-#[allow(deprecated)]
 #[cfg(any(feature = "alloc", test))]
 pub use crate::encode::{encode, encode_engine, encode_engine_string};
-#[allow(deprecated)]
 pub use crate::encode::{encode_engine_slice, encoded_len, EncodeSliceError};
 
 mod decode;
-#[allow(deprecated)]
 #[cfg(any(feature = "alloc", test))]
 pub use crate::decode::{decode, decode_engine, decode_engine_vec};
-#[allow(deprecated)]
 pub use crate::decode::{decode_engine_slice, decoded_len_estimate, DecodeError, DecodeSliceError};
 
 pub mod prelude;

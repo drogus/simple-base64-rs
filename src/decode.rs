@@ -82,7 +82,6 @@ impl From<DecodeError> for DecodeSliceError {
 /// Decode base64 using the [`STANDARD` engine](STANDARD).
 ///
 /// See [Engine::decode].
-#[deprecated(since = "0.21.0", note = "Use Engine::decode")]
 #[cfg(any(feature = "alloc", test))]
 pub fn decode<T: AsRef<[u8]>>(input: T) -> Result<Vec<u8>, DecodeError> {
     STANDARD.decode(input)
@@ -92,7 +91,6 @@ pub fn decode<T: AsRef<[u8]>>(input: T) -> Result<Vec<u8>, DecodeError> {
 ///
 /// See [Engine::decode].
 ///Returns a `Result` containing a `Vec<u8>`.
-#[deprecated(since = "0.21.0", note = "Use Engine::decode")]
 #[cfg(any(feature = "alloc", test))]
 pub fn decode_engine<E: Engine, T: AsRef<[u8]>>(
     input: T,
@@ -105,7 +103,6 @@ pub fn decode_engine<E: Engine, T: AsRef<[u8]>>(
 ///
 /// See [Engine::decode_vec].
 #[cfg(any(feature = "alloc", test))]
-#[deprecated(since = "0.21.0", note = "Use Engine::decode_vec")]
 pub fn decode_engine_vec<E: Engine, T: AsRef<[u8]>>(
     input: T,
     buffer: &mut Vec<u8>,
@@ -117,7 +114,6 @@ pub fn decode_engine_vec<E: Engine, T: AsRef<[u8]>>(
 /// Decode the input into the provided output slice.
 ///
 /// See [Engine::decode_slice].
-#[deprecated(since = "0.21.0", note = "Use Engine::decode_slice")]
 pub fn decode_engine_slice<E: Engine, T: AsRef<[u8]>>(
     input: T,
     output: &mut [u8],

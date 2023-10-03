@@ -13,7 +13,6 @@ use crate::PAD_BYTE;
 ///
 /// See [Engine::encode].
 #[allow(unused)]
-#[deprecated(since = "0.21.0", note = "Use Engine::encode")]
 #[cfg(any(feature = "alloc", test))]
 pub fn encode<T: AsRef<[u8]>>(input: T) -> String {
     STANDARD.encode(input)
@@ -23,7 +22,6 @@ pub fn encode<T: AsRef<[u8]>>(input: T) -> String {
 ///
 /// See [Engine::encode].
 #[allow(unused)]
-#[deprecated(since = "0.21.0", note = "Use Engine::encode")]
 #[cfg(any(feature = "alloc", test))]
 pub fn encode_engine<E: Engine, T: AsRef<[u8]>>(input: T, engine: &E) -> String {
     engine.encode(input)
@@ -33,7 +31,6 @@ pub fn encode_engine<E: Engine, T: AsRef<[u8]>>(input: T, engine: &E) -> String 
 ///
 /// See [Engine::encode_string].
 #[allow(unused)]
-#[deprecated(since = "0.21.0", note = "Use Engine::encode_string")]
 #[cfg(any(feature = "alloc", test))]
 pub fn encode_engine_string<E: Engine, T: AsRef<[u8]>>(
     input: T,
@@ -47,7 +44,6 @@ pub fn encode_engine_string<E: Engine, T: AsRef<[u8]>>(
 ///
 /// See [Engine::encode_slice].
 #[allow(unused)]
-#[deprecated(since = "0.21.0", note = "Use Engine::encode_slice")]
 pub fn encode_engine_slice<E: Engine, T: AsRef<[u8]>>(
     input: T,
     output_buf: &mut [u8],
