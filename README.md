@@ -2,15 +2,43 @@
 
 [![](https://img.shields.io/crates/v/simple-base64.svg)](https://crates.io/crates/simple-base64) [![Docs](https://docs.rs/simple-base64/badge.svg)](https://docs.rs/simple-base64) [![unsafe forbidden](https://img.shields.io/badge/unsafe-forbidden-success.svg)](https://github.com/rust-secure-code/safety-dance/)
 
-It's simple-base64. What more could anyone want?
+This library is a fork of a base64 library with aim to be easy to use and to have an API that is easy to figure out
+when looking at the documentation.
 
-This library's goals are to be *correct* and *fast*. It's thoroughly tested and widely used. It exposes functionality at
-multiple levels of abstraction so you can choose the level of convenience vs performance that you want,
-e.g. `decode_engine_slice` decodes into an existing `&mut [u8]` and is pretty fast (2.6GiB/s for a 3 KiB input),
-whereas `decode_engine` allocates a new `Vec<u8>` and returns it, which might be more convenient in some cases, but is
-slower (although still fast enough for almost any purpose) at 2.1 GiB/s.
+See the [docs](https://docs.rs/simple-base64) for the details.
 
-See the [docs](https://docs.rs/simple-base64) for all the details.
+## Usage
+
+### Standard encoding/decoding
+
+Standard encoding and decoding can be achieved by using the crate level `encode` and `decode` functions:
+
+```rust
+use simple_base64::{encode, decode};
+
+let s = String::from("a string");
+let encoded = encode(s.clone());
+let decoded = decode(encoded).unwrap();
+// decode returns a vector of bytes, thus we have to convert it to String
+let decoded = String::from_utf8(decoded).unwrap();
+assert_eq!(s, decoded);
+```
+
+### Additional engines
+
+If you need a different engine you can also use it with `encode_engine` and `decode_engine` methods:
+
+```rust
+use simple_base64::{encode_engine, decode_engine};
+use simple_base64::prelude::BASE64_STANDARD_NO_PAD as NO_PAD;
+
+let s = String::from("a string");
+let encoded = encode_engine(s.clone(), &NO_PAD);
+let decoded = decode_engine(encoded, &NO_PAD).unwrap();
+// decode returns a vector of bytes, thus we have to convert it to String
+let decoded = String::from_utf8(decoded).unwrap();
+assert_eq!(s, decoded);
+```
 
 ## FAQ
 
