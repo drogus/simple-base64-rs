@@ -1,4 +1,4 @@
-use base64::{
+use simple_base64::{
     alphabet::URL_SAFE, engine::general_purpose::PAD, engine::general_purpose::STANDARD, *,
 };
 

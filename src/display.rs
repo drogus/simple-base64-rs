@@ -1,7 +1,7 @@
 //! Enables base64'd output anywhere you might use a `Display` implementation, like a format string.
 //!
 //! ```
-//! use base64::{display::Base64Display, engine::general_purpose::STANDARD};
+//! use simple_base64::{display::Base64Display, engine::general_purpose::STANDARD};
 //!
 //! let data = vec![0x0, 0x1, 0x2, 0x3];
 //! let wrapper = Base64Display::new(&data, &STANDARD);

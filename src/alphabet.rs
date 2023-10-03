@@ -27,7 +27,7 @@ const ALPHABET_SIZE: usize = 64;
 /// Building a const:
 ///
 /// ```
-/// use base64::alphabet::Alphabet;
+/// use simple_base64::alphabet::Alphabet;
 ///
 /// static CUSTOM: Alphabet = {
 ///     // Result::unwrap() isn't const yet, but panic!() is OK
@@ -41,7 +41,7 @@ const ALPHABET_SIZE: usize = 64;
 /// Building a lazy_static:
 ///
 /// ```
-/// use base64::{
+/// use simple_base64::{
 ///     alphabet::Alphabet,
 ///     engine::{general_purpose::GeneralPurpose, GeneralPurposeConfig},
 /// };

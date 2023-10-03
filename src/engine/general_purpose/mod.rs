@@ -230,7 +230,7 @@ fn read_u64(s: &[u8]) -> u64 {
 /// Contains configuration parameters for base64 encoding and decoding.
 ///
 /// ```
-/// # use base64::engine::GeneralPurposeConfig;
+/// # use simple_base64::engine::GeneralPurposeConfig;
 /// let config = GeneralPurposeConfig::new()
 ///     .with_encode_padding(false);
 ///     // further customize using `.with_*` methods as needed

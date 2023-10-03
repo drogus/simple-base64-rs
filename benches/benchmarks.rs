@@ -1,7 +1,7 @@
 #[macro_use]
 extern crate criterion;
 
-use base64::{
+use simple_base64::{
     display,
     engine::{general_purpose::STANDARD, Engine},
     write,

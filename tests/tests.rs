@@ -1,9 +1,9 @@
 use rand::{Rng, SeedableRng};
 
-use base64::engine::{general_purpose::STANDARD, Engine};
-use base64::*;
+use simple_base64::engine::{general_purpose::STANDARD, Engine};
+use simple_base64::*;
 
-use base64::engine::general_purpose::{GeneralPurpose, NO_PAD};
+use simple_base64::engine::general_purpose::{GeneralPurpose, NO_PAD};
 
 // generate random contents of the specified length and test encode/decode roundtrip
 fn roundtrip_random<E: Engine>(

@@ -131,7 +131,7 @@ pub fn decode_engine_slice<E: Engine, T: AsRef<[u8]>>(
 /// # Examples
 ///
 /// ```
-/// use base64::decoded_len_estimate;
+/// use simple_base64::decoded_len_estimate;
 ///
 /// assert_eq!(3, decoded_len_estimate(1));
 /// assert_eq!(3, decoded_len_estimate(2));

@@ -2,7 +2,7 @@
 #[macro_use] extern crate libfuzzer_sys;
 extern crate base64;
 
-use base64::*;
+use simple_base64::*;
 
 mod utils;
 

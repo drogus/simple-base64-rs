@@ -3,7 +3,7 @@
 extern crate libfuzzer_sys;
 extern crate base64;
 
-use base64::{Engine as _, engine::{self, general_purpose}};
+use simple_base64::{Engine as _, engine::{self, general_purpose}};
 
 fuzz_target!(|data: &[u8]| {
     let config = general_purpose::GeneralPurposeConfig::new()

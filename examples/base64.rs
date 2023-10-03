@@ -4,7 +4,7 @@ use std::path::PathBuf;
 use std::process;
 use std::str::FromStr;
 
-use base64::{alphabet, engine, read, write};
+use simple_base64::{alphabet, engine, read, write};
 use structopt::StructOpt;
 
 #[derive(Debug, StructOpt)]

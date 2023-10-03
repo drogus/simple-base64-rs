@@ -3,7 +3,7 @@
 //! 1. Perhaps one of the preconfigured engines in [engine::general_purpose] will suit, e.g.
 //! [engine::general_purpose::STANDARD_NO_PAD].
 //!     - These are re-exported in [prelude] with a `BASE64_` prefix for those who prefer to
-//!       `use base64::prelude::*` or equivalent, e.g. [prelude::BASE64_STANDARD_NO_PAD]
+//!       `use simple_base64::prelude::*` or equivalent, e.g. [prelude::BASE64_STANDARD_NO_PAD]
 //! 1. If not, choose which alphabet you want. Most usage will want [alphabet::STANDARD] or [alphabet::URL_SAFE].
 //! 1. Choose which [Engine] implementation you want. For the moment there is only one: [engine::GeneralPurpose].
 //! 1. Configure the engine appropriately using the engine's `Config` type.
@@ -83,7 +83,7 @@
 //!
 #![cfg_attr(feature = "alloc", doc = "```")]
 #![cfg_attr(not(feature = "alloc"), doc = "```ignore")]
-//! use base64::{Engine as _, engine::general_purpose};
+//! use simple_base64::{Engine as _, engine::general_purpose};
 //!
 //! let orig = b"data";
 //! let encoded: String = general_purpose::STANDARD_NO_PAD.encode(orig);
@@ -98,7 +98,7 @@
 //!
 #![cfg_attr(feature = "alloc", doc = "```")]
 #![cfg_attr(not(feature = "alloc"), doc = "```ignore")]
-//! use base64::{engine, alphabet, Engine as _};
+//! use simple_base64::{engine, alphabet, Engine as _};
 //!
 //! // bizarro-world base64: +/ as the first symbols instead of the last
 //! let alphabet =

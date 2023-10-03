@@ -104,7 +104,7 @@ pub trait Engine: Send + Sync {
     /// # Example
     ///
     /// ```rust
-    /// use base64::{Engine as _, engine::{self, general_purpose}, alphabet};
+    /// use simple_base64::{Engine as _, engine::{self, general_purpose}, alphabet};
     ///
     /// let b64 = general_purpose::STANDARD.encode(b"hello world~");
     /// println!("{}", b64);
@@ -139,7 +139,7 @@ pub trait Engine: Send + Sync {
     /// # Example
     ///
     /// ```rust
-    /// use base64::{Engine as _, engine::{self, general_purpose}, alphabet};
+    /// use simple_base64::{Engine as _, engine::{self, general_purpose}, alphabet};
     /// const CUSTOM_ENGINE: engine::GeneralPurpose =
     ///     engine::GeneralPurpose::new(&alphabet::URL_SAFE, general_purpose::NO_PAD);
     ///
@@ -180,7 +180,7 @@ pub trait Engine: Send + Sync {
     ///
     #[cfg_attr(feature = "alloc", doc = "```")]
     #[cfg_attr(not(feature = "alloc"), doc = "```ignore")]
-    /// use base64::{Engine as _, engine::general_purpose};
+    /// use simple_base64::{Engine as _, engine::general_purpose};
     /// let s = b"hello internet!";
     /// let mut buf = Vec::new();
     /// // make sure we'll have a slice big enough for base64 + padding
@@ -229,7 +229,7 @@ pub trait Engine: Send + Sync {
     /// # Example
     ///
     /// ```rust
-    /// use base64::{Engine as _, alphabet, engine::{self, general_purpose}};
+    /// use simple_base64::{Engine as _, alphabet, engine::{self, general_purpose}};
     ///
     /// let bytes = general_purpose::STANDARD
     ///     .decode("aGVsbG8gd29ybGR+Cg==").unwrap();
@@ -272,12 +272,12 @@ pub trait Engine: Send + Sync {
     /// # Example
     ///
     /// ```rust
-    /// use base64::{Engine as _, alphabet, engine::{self, general_purpose}};
+    /// use simple_base64::{Engine as _, alphabet, engine::{self, general_purpose}};
     /// const CUSTOM_ENGINE: engine::GeneralPurpose =
     ///     engine::GeneralPurpose::new(&alphabet::URL_SAFE, general_purpose::PAD);
     ///
     /// fn main() {
-    ///     use base64::Engine;
+    ///     use simple_base64::Engine;
     ///     let mut buffer = Vec::<u8>::new();
     ///     // with the default engine
     ///     general_purpose::STANDARD

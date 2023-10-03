@@ -2,7 +2,7 @@ extern crate rand;
 extern crate rand_pcg;
 extern crate sha2;
 
-use base64::{alphabet, engine::{self, general_purpose}};
+use simple_base64::{alphabet, engine::{self, general_purpose}};
 use self::rand::{Rng, SeedableRng};
 use self::rand_pcg::Pcg32;
 use self::sha2::Digest as _;

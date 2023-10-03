@@ -12,7 +12,7 @@ use std::io;
 ///
 /// ```
 /// use std::io::Write;
-/// use base64::engine::general_purpose;
+/// use simple_base64::engine::general_purpose;
 ///
 /// let mut enc = base64::write::EncoderStringWriter::new(&general_purpose::STANDARD);
 ///
@@ -28,7 +28,7 @@ use std::io;
 ///
 /// ```
 /// use std::io::Write;
-/// use base64::engine::general_purpose;
+/// use simple_base64::engine::general_purpose;
 ///
 /// let mut buf = String::from("base64: ");
 ///
