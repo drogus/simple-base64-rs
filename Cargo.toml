@@ -1,6 +1,6 @@
 [package]
 name = "simple-base64"
-version = "0.23.1"
+version = "0.23.2"
 authors = ["Alice Maz <alice@alicemaz.com>", "Marshall Pierce <marshall@mpierce.org>"]
 description = "encodes and decodes base64 as bytes or utf8 with simple API"
 repository = "https://github.com/drogus/simple-base64-rs"
